@@ -1,5 +1,22 @@
+import Button from "./button";
+
 function App() {
-    return <div>App</div>
+  return (
+    <div>
+      <div>
+        <Button>Click me!</Button>
+      </div>
+      <div>
+        <Button>Seal!</Button>
+      </div>
+      <div>
+        <Button>Deal!</Button>
+      </div>
+      <div>
+        <Button>Feel!</Button>
+      </div>
+    </div>
+  );
 }
 
 export default App;
