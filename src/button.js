@@ -17,6 +17,7 @@ function Button({
   danger,
   outline,
   rounded,
+  ...rest
 }) {
   console.log(outline && success);
   const classes = className('flex items-center px-3 py-1.5 border', {
@@ -34,7 +35,7 @@ function Button({
     'text-yellow-400': outline && warning,
     'text-red-500': outline && danger
   });
-  return <button className={classes}>{children}</button>;
+  return <button {...rest} className={classes}>{children}</button>;
 }
 
 Button.propTypes = {

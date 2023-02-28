@@ -2,19 +2,22 @@ import Button from "./button";
 import { GoBell } from 'react-icons/go';
 
 function App() {
+  const handleClick = () => {
+    console.log("Click!!");
+  }
   return (
     <div>
       <div>
-        <Button success outline rounded>
+        <Button success outline rounded onClick={handleClick}>
           <GoBell />
           Click me!
           </Button>
       </div>
       <div>
-        <Button danger outline>Seal!</Button>
+        <Button danger outline onMouseEnter={handleClick}>Seal!</Button>
       </div>
       <div>
-        <Button warning>Deal!</Button>
+        <Button warning onMouseLeave={handleClick}>Deal!</Button>
       </div>
       <div>
         <Button secondary outline>Feel!</Button>
