@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <div>
-        <Button success outline rounded onClick={handleClick}>
+        <Button success outline rounded onClick={handleClick} className='mb-5'>
           <GoBell />
           Click me!
           </Button>
