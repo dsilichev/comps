@@ -1,26 +1,20 @@
-import Accordion from "./components/Accordion";
+import { useState } from "react";
 
+import Dropdown from "./components/Dropdown";
 function App() {
+  const [selection, setSelection] = useState(null);
 
-  const items = [
-    {
-      id: 'sfjs',
-      label: 'Can I use React?',
-      content: 'You can use React You can use React You can use React You can use React You can use React'
-    },
-    {
-      id: 'ssfg',
-      label: 'Can I use JS?',
-      content: 'You can use JS You can use JS You can use JS You can use JS You can use JS You can use JS'
-    },
-    {
-      id: 'sgjhkyuk',
-      label: 'Can I use CSS?',
-      content: 'You can use CSS You can use CSS You can use CSS You can use CSS You can use CSS You can use CSS'
-    },
+  const handleSelect = (option) => {
+    setSelection(option);
+  }
+
+  const options = [
+    { label: 'Red', value: 'red'},
+    { label: 'Green', value: 'green'},
+    { label: 'Blue', value: 'blue'},
   ];
 
-  return <Accordion items={items} />;
+  return <Dropdown options={options} value={selection} onChange={handleSelect} />;
 }
 
 export default App;
